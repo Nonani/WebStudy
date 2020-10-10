@@ -1,0 +1,16 @@
+{
+  "name": "mysql_example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "conn_database.js",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node login_example.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

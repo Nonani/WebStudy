@@ -17,7 +17,7 @@ var app = http.createServer(function(request, response){
             response.writeHead(200);
             response.end(template.HTML(title, description));
         }else{
-            fs.readFile(`${queryData.id}`, 'utf8', function(err, description){
+            fs.readFile(`./data/${queryData.id}`, 'utf8', function(err, description){
                 if(err) throw err;
                 console.log(description);
                 response.writeHead(200);

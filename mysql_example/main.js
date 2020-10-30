@@ -5,7 +5,7 @@ const url = require('url');
 const qs = require('querystring');
 // var bodyParser = require('body-parser');
 
-var db_lib = require('./lib/conn_database.js');
+
 
 var app = express();
 // post data 받아오는 방법 1
@@ -17,8 +17,6 @@ var app = express();
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine','ejs');
 
-var conn = db_lib.init();
-db_lib.connect(conn);   //db 연결
 app.set('view engine','ejs');
 app.use('/', require('./routes/index.js'));
 

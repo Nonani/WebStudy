@@ -1,6 +1,7 @@
 
 var express = require('express');
 var router = express.Router();
+var passport = require('passport')
 
 var db_lib = require('../lib/conn_database.js');
 var conn = db_lib.init();
@@ -12,7 +13,14 @@ router.get('/', function(req, res){
     res.render('../view/index.ejs', { title: 'Index!' });
 })
 
+
+//using passport
+
+//without passport
 router.post('/sign_in', function(req, res){
+
+
+    
     var sql = 'SELECT * FROM user where id = ? and pwd = ?'
         
     conn.query(sql, [req.body.id, req.body.pwd], function(err, result, field){

@@ -16,8 +16,6 @@ var app = express();
 // 방법 2
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine','ejs');
-
-app.set('view engine','ejs');
 app.use('/', require('./routes/index.js'));
 
 

@@ -10,6 +10,9 @@ app.use(session({
     saveUninitialized: true
 }))
  
+//조회수 구현 예제 단, 서버가 꺼지면 초기화 됨, 즉 휘발성 메모리
+
+
 app.get('/', function (req, res, next) {
     console.log(req.session);
     if(req.session.num === undefined){

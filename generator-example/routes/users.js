@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var auth = require('../lib/auth')
 
 // var db = require('../config/conn_database.js');
 // var conn = db.init();
@@ -8,6 +9,12 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
+});
+
+router.get('/board', function(req, res, next) {
+  
+  res.send(auth.statusUI(req, res));
+
 });
 
 // router.post('/sign_in', function(req, res){

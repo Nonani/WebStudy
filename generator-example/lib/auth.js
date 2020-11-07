@@ -7,9 +7,10 @@ module.exports={
         }
     },
     statusUI:function(req, res){
-        var authStatusUI = '<a href="/auth/login"?login>/a>';
+        var authStatusUI = '<a href="/auth/login">login</a>'
         if(this.isOwner(req, res)){
-            authStatusUI = `${req.user.name} | <a href="/auth/logout">logout</a>`;
+            console.log('로그인 중')
+            authStatusUI = `${req.user.id} | <a href="/auth/logout">logout</a>`;
         }
         return authStatusUI;
     }

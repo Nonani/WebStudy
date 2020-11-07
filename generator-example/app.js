@@ -54,7 +54,7 @@ var passport = require('passport')
             console.log("결과 없음");
           done(null, false, { message: 'Incorrect' });
         }else{
-          console.log(result);
+          // console.log(result);
           var json = JSON.stringify(result[0]);
           var userinfo = JSON.parse(json);
           // console.log("userinfo " + userinfo);
@@ -105,10 +105,12 @@ var passport = require('passport')
     // })
   }
 ));
+
 app.post('/auth/login_process',
-  passport.authenticate('local', { successRedirect: '/users',
+  passport.authenticate('local', { successRedirect: '/users/board',
                                    failureRedirect: '/auth/login'})
 );
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth', authRouter);

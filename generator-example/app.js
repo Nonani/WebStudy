@@ -84,25 +84,6 @@ var passport = require('passport')
           return done(null, userinfo);
         }
     });
-
-
-
-    // var sql = 'SELECT * FROM USER WHERE ID=? AND PWD=?';
-    // conn.query(sql , [username, password], function (err, result) {
-    //   if(err) console.log('mysql 에러');  
-
-    //   // 입력받은 ID와 비밀번호에 일치하는 회원정보가 없는 경우   
-    //   if(result.length === 0){
-    //     console.log("결과 없음");
-    //     return done(null, false, { message: 'Incorrect' });
-    //   }else{
-    //     console.log(result);
-    //     var json = JSON.stringify(result[0]);
-    //     var userinfo = JSON.parse(json);
-    //     console.log("userinfo " + userinfo);
-    //     return done(null, userinfo);  // result값으로 받아진 회원정보를 return해줌
-    //   }
-    // })
   }
 ));
 

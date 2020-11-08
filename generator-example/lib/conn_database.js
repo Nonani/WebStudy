@@ -13,7 +13,7 @@ module.exports={
   connect: function(conn){
     conn.connect(function(err){
       if(err) console.error('connect fail : '+ err);
-      else console.log('connected successfully!');
+      // else console.log('connected successfully!');
     });
   },
   end: function(){
